@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-snake"></i> Snake Game</h1>
+            <p class="subtitle">Classic arcade game in your browser</p>
+        </header>
+
+        <div class="game-area">
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">Score</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">High Score</span>
+                    <span id="high-score" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Level</span>
+                    <span id="level" class="value">1</span>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="start-btn" class="btn btn-start">
+                    <i class="fas fa-play"></i> Start Game
+                </button>
+                <button id="pause-btn" class="btn btn-pause" disabled>
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <button id="reset-btn" class="btn btn-reset">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+                <div class="speed-control">
+                    <label for="speed">Speed:</label>
+                    <select id="speed">
+                        <option value="150">Slow</option>
+                        <option value="100" selected>Normal</option>
+                        <option value="70">Fast</option>
+                        <option value="40">Extreme</option>
+                    </select>
+                </div>
+            </div>
+
+            <canvas id="game-canvas" width="600" height="400"></canvas>
+
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> How to Play</h3>
+                <div class="controls">
+                    <div class="control-item">
+                        <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>
+                        <span>Move Snake</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>Space</kbd>
+                        <span>Pause/Resume</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>R</kbd>
+                        <span>Reset Game</span>
+                    </div>
+                </div>
+                <p>Eat the red food to grow and earn points. Avoid walls and yourself!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart"></i> by [Your Name] | 
+               <a href="https://github.com/yourusername/snake-game" target="_blank">
+                   <i class="fab fa-github"></i> View on GitHub
+               </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
